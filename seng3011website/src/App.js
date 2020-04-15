@@ -15,7 +15,7 @@ import Country from "./category/Country";
 import Disease from "./category/Disease";
 import Location from "./Location";
 import axios from 'axios';
-
+import Hangman from "./Games/Hangman"
 // updates map db daily to get current data from calmclams
 var CronJob = require('cron').CronJob;
 var job = new CronJob('0 0 * * *', function() {
@@ -34,12 +34,12 @@ function App() {
           <Route path="/info" component={Info}/>
           <Route path="/quiz" component={Quiz}/>
           <Route path = "/map" component = {MapContainer}/>
-          <Route path="/login" 
+          <Route path="/login"
           render={(props)=>{
                 if(localStorage.getItem('username')) return <Home/>;
                 else return <Login/>;
             }} />
-          <Route path = "/signup" 
+          <Route path = "/signup"
           render={(props)=>{
               if(localStorage.getItem('username')) return <Home/>;
               else return <SignUp/>;
@@ -48,10 +48,10 @@ function App() {
           <Route path="/country" component={Country} />
           <Route path="/disease" component={Disease} />
           <Route path="/location" component={Location} />
+          <Route path="/hangman" component={Hangman} />
 
     </div>
     </Router>
   );
 }
-
 export default App;

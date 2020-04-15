@@ -9,6 +9,7 @@ class PageHeader extends Component {
       <Router>
         <div>
           <a href='#/home'><img src={heading} id='heading' alt=''/></a>
+          
           <NavigationBar />
         </div>
       </Router>
