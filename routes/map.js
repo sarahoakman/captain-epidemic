@@ -642,7 +642,6 @@ function convertDisease(d){
     for (var j = 0; j < diseases.length; j++) {
       if (d == diseases[j].title){
         d = diseases[j].name;
-
       }
     }
   }
