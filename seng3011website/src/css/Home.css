@@ -1,3 +1,13 @@
+body {
+  cursor: url('../img/cur2.png'), auto;
+  /* cursor: url('../img/cursorrocket.png'), pointer; */
+}
+
+#homepage {
+  background-image: url('../img/bgmain.png');
+  background-size: cover;
+}
+
 @font-face {
   font-family: 'My Kids Handwritten Basic';
   src: url(../fonts/MyKidsHandwrittenBasic-gxxZY.ttf) format('truetype');
@@ -15,57 +25,6 @@
   src: url(../fonts/Stupid\ Meeting_D.otf) format('opentype');
   font-style: normal;
 }
-
-.flip-card {
-	background-color: transparent;
-  padding-top: 66%;
-	perspective: 1000px; 
-  }
-
-  .flip-card-inner {
-	position: absolute;
-  top:0;
-  bottom:0;
-  left:0;
-  right:0;
-	text-align: center;
-	transition: transform 0.8s;
-	transform-style: preserve-3d;
-  }
-
- 
-  .flip-card:hover .flip-card-inner {
-	transform: rotateY(180deg);
-  }
-
-  .flip-card-front, .flip-card-back {
-  background-image: url('../img/titlecard.jpg');
-  background-size: contain;
-	position: absolute;
-	width: 100%;
-	height: 100%;
-	-webkit-backface-visibility: hidden; 
-  backface-visibility: hidden;
-  border-radius: 10%;
-  }
-
-  
-  .flip-card-front {
-
-  text-align: center;
-  color: white;
-  padding-top: 12vh;
-  text-shadow: 2px 2px #000000;
-  }
-
-
-  .flip-card-back {
-	padding-top: 12%;
-	padding-left: 5px;
-  padding-right: 5px;
-  text-align: center;
-	transform: rotateY(180deg);
-  }
 
   .button-primary-flip {
     font-family: 'My Kids Handwritten Basic';
@@ -85,19 +44,16 @@
 
   #trending {
     padding-bottom: 8vh;
-    padding-top: 3vh;
-  }
-
-  #trending-topics {
-    margin-top: 20px;
+    /* background-image: url('../img/bgmain.png'); */
+    background-size: cover;
   }
 
   #map-location {
-    background-color: #F53240;
-    padding-top: 10vh;
-    padding-bottom: 10vh;
-    color: white;
+    padding-top: 5vh;
+    padding-bottom: 5vh;
+    color: #F53240;
     margin-bottom: 2vh;
+    position: relative;
   }
 
   .button-map {
@@ -126,12 +82,14 @@
   }
 
   #categories {
-    padding-top: 1vh;
+    padding-top: 5vh;
     padding-bottom: 10vh;
+    /* background-image: url('../img/bgmain.png'); */
+    background-size: cover;
   }
 
   .button-category {
-    font-family: 'Stella'; 
+    font-family: 'Stella';
     background-image: url('../img/titlecard.jpg');
     background-size: cover;
     background-repeat: no-repeat;
@@ -153,6 +111,162 @@
   }
 
   .headingpage {
-    color: rgb(117, 117, 117);
-    font-size: 80px;
+    /* color: rgb(255, 255, 255); */
+    color: rgb(0, 23, 58);
+    font-size: 90px;
+    text-shadow: 2px 2px #c7c7c7;
   }
+
+  .virusImg {
+    width: 100%;
+    height: 100%;
+    animation: bounce 1.5s;
+    animation-iteration-count: infinite;
+    /* box-shadow: 2px 5px #2e2e2ec2; */
+  }
+
+  @keyframes bounce {
+    0% {
+      transform: translate(0px, 2px);
+    }
+    10% {
+      transform: translate(0px, 4px);
+    }
+    20% {
+      transform: translate(0px, 6px);
+    }
+    30% {
+      transform: translate(0px, 8px);
+    }
+    40% {
+      transform: translate(0px, 10px);
+    }
+    50% {
+      transform: translate(0px, 12px);
+    }
+    60% {
+      transform: translate(0px, 10px);
+    }
+    70% {
+      transform: translate(0px, 8px);
+    }
+    80% {
+      transform: translate(0px, 6px);
+    }
+    90% {
+      transform: translate(0px, 4px);
+    }
+    100% {
+      transform: translate(0px, 2px);
+    }
+  }
+
+  .diseaseTrend {
+    color: rgb(0, 23, 58);
+    
+  }
+  .diseaseTrend:hover {
+    /* color: pink; */
+  }
+
+  .disLink {
+    /* background-color: white; */
+  }
+
+  .mapImg {
+    width: 50%;
+    animation: bounce 1.5s;
+    animation-iteration-count: infinite;
+  }
+
+  #mapbase {
+    width: 80%;
+  }
+
+  .waves {
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+  }
+
+  .categorybuttons {
+    min-width: 200px;
+    min-height: 200px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    background-color: #b93738;
+    color: white;
+    color: transparent;
+    border: none;
+    padding: 30px 30px 30px 30px;
+    border-radius: 50%;
+
+
+  animation: bounce 1.5s;
+
+  animation-iteration-count: infinite;
+
+  } 
+
+ #diseasesbutton {
+	background: url("../img/categorydiseases.png") no-repeat;
+	background-size: 100%;
+}
+
+#locationsbutton{
+  background: url("../img/categorylocations.png") no-repeat;
+	background-size: 100%;
+}
+
+#diseasesbutton:hover {
+	background:none;
+	background-color: #b93738;
+	color: white;
+}
+
+#locationsbutton:hover {
+	background:none;
+	background-color: #b93738;
+	color: white;
+}
+
+.buttonMaps {
+  width: 40%;
+  height: 80vh;
+  background-color: #b93738;
+  border: none;
+  border-radius: 50%;
+  position: relative;
+}
+
+.buttonMaps:hover {
+  background-color: #942323;
+  border:none;
+}
+
+#map-info-part {
+  
+}
+
+.diseases-home-pg {
+  font-family: "Stella";
+  font-size: 30px;
+  height: 50px;
+  background-color: transparent;
+  border-radius: 25px;
+  line-height:30px;
+  border: none;
+  color: black;
+  width: auto;
+  padding-top: 10px;
+}
+
+.diseases-home-pg:hover {
+  box-shadow: 2px 10px  #BA6161;
+  background-color:  #F9BE02; 
+}
+
+.trending-row {
+  padding-bottom: 30px;
+}
