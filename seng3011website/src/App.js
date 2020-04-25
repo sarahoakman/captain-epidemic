@@ -29,7 +29,6 @@ job.start();
 function App() {
   return (
     <Router>
-      
     <div className="App">
         <Switch>
           <Route exact path="/" component={Landing}/>
