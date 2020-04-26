@@ -44,7 +44,7 @@ function App() {
             else return <Login/>;
         }} />
           <Route path="/info" component={Info}/>
-          <Route path="/quiz" component={Quiz}/>
+          <Route path="/quiz"
           render={(props)=>{
               if(localStorage.getItem('username')) return <Quiz/>;
               else return <Login/>;
